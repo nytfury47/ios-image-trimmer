@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E5E640A2386392400374A17 /* ImageTrimmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageTrimmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E5E640A2386392400374A17 /* Image Trimmer 42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Trimmer 42.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5E640D2386392400374A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5E640F2386392400374A17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5E5E64112386392400374A17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		5E5E640B2386392400374A17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E5E640A2386392400374A17 /* ImageTrimmer.app */,
+				5E5E640A2386392400374A17 /* Image Trimmer 42.app */,
 				5E5E64202386392500374A17 /* ImageTrimmerTests.xctest */,
 				5E5E642B2386392500374A17 /* ImageTrimmerUITests.xctest */,
 			);
@@ -145,7 +145,7 @@
 			);
 			name = ImageTrimmer;
 			productName = ImageTrimmer;
-			productReference = 5E5E640A2386392400374A17 /* ImageTrimmer.app */;
+			productReference = 5E5E640A2386392400374A17 /* Image Trimmer 42.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5E5E641F2386392500374A17 /* ImageTrimmerTests */ = {
@@ -437,12 +437,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K4TVQ7E34D;
 				INFOPLIST_FILE = ImageTrimmer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tan.ImageTrimmer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Image Trimmer 42";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,12 +456,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K4TVQ7E34D;
 				INFOPLIST_FILE = ImageTrimmer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tan.ImageTrimmer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Image Trimmer 42";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
