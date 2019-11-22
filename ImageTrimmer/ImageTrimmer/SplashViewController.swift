@@ -15,8 +15,7 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-//        lblAppName.font = lblAppName.font.withSize(getScaledHeight(base: BASE_FONT_SIZE_S))
+        lblAppName.font = lblAppName.font.withSize(getScaledHeight(base: BASE_FONT_SIZE_XXXXXL))
     }
 
     override func viewWillAppear(_ animated: Bool) {

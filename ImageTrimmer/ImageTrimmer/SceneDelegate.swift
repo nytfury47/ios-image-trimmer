@@ -22,9 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene // <-- Window Scene set to UIWindow
         
         // Fake a loading time
-        RunLoop.current.run(until: NSDate(timeIntervalSinceNow: 3) as Date)
-        
-        // Init PPDataModel
+        RunLoop.current.run(until: NSDate(timeIntervalSinceNow: 2) as Date)
         
         let navCon = UINavigationController()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

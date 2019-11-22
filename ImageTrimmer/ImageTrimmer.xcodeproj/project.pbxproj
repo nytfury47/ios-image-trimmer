@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E143A372387B8640096A1C0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E143A362387B8640096A1C0 /* Helper.swift */; };
+		5E143A392387C0150096A1C0 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E143A382387C0150096A1C0 /* UIExtension.swift */; };
+		5E143A3B2387C19F0096A1C0 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E143A3A2387C19F0096A1C0 /* DataModel.swift */; };
 		5E5E640E2386392400374A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E640D2386392400374A17 /* AppDelegate.swift */; };
 		5E5E64102386392400374A17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E640F2386392400374A17 /* SceneDelegate.swift */; };
 		5E5E64122386392400374A17 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E64112386392400374A17 /* SplashViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E143A362387B8640096A1C0 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		5E143A382387C0150096A1C0 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		5E143A3A2387C19F0096A1C0 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		5E5E640A2386392400374A17 /* Image Trimmer 42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Trimmer 42.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5E640D2386392400374A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5E640F2386392400374A17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,8 +108,11 @@
 				5E5E640D2386392400374A17 /* AppDelegate.swift */,
 				5E5E640F2386392400374A17 /* SceneDelegate.swift */,
 				5E5E64112386392400374A17 /* SplashViewController.swift */,
-				5E5E64132386392400374A17 /* Main.storyboard */,
+				5E143A3A2387C19F0096A1C0 /* DataModel.swift */,
+				5E143A382387C0150096A1C0 /* UIExtension.swift */,
+				5E143A362387B8640096A1C0 /* Helper.swift */,
 				5E5E64162386392400374A17 /* Assets.xcassets */,
+				5E5E64132386392400374A17 /* Main.storyboard */,
 				5E5E64182386392400374A17 /* LaunchScreen.storyboard */,
 				5E5E641B2386392400374A17 /* Info.plist */,
 			);
@@ -262,6 +271,9 @@
 				5E5E64122386392400374A17 /* SplashViewController.swift in Sources */,
 				5E5E640E2386392400374A17 /* AppDelegate.swift in Sources */,
 				5E5E64102386392400374A17 /* SceneDelegate.swift in Sources */,
+				5E143A392387C0150096A1C0 /* UIExtension.swift in Sources */,
+				5E143A372387B8640096A1C0 /* Helper.swift in Sources */,
+				5E143A3B2387C19F0096A1C0 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
