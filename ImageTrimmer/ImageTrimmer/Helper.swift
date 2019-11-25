@@ -102,3 +102,19 @@ func imageWithMaxLength(sourceImage: UIImage, useWidth: Bool) -> UIImage {
     UIGraphicsEndImageContext()
     return newImage!
 }
+
+func showErrorAlert(vc: UIViewController, message: String, dismissVC: Bool = false, segueToID: String = "") {
+    let alert = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: message, preferredStyle: .alert)
+    
+    if dismissVC {
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { (action) in
+            vc.presentingViewController?.dismiss(animated: true, completion: nil)
+        }))
+    } else {
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: (segueToID.isEmpty) ? nil : { (action) in
+            vc.performSegue(withIdentifier: segueToID, sender: nil)
+        }))
+    }
+    
+    vc.present(alert, animated: true)
+}

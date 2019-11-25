@@ -233,7 +233,7 @@ class DataModel {
         return imageInfoList[index].discardImage
     }
     
-    static func createImageFileName(modelID: Int) -> String {
+    static func createImageFileName() -> String {
         var number = 0
         var imageName = ""
         let baseURL = DataModel.getFileBaseURL()

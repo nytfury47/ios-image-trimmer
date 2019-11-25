@@ -87,3 +87,111 @@ extension UIDevice {
     }()
     
 }
+
+extension UIImage {
+    
+    func resize(size _size: CGSize) -> UIImage? {
+        let widthRatio = _size.width / size.width
+        let heightRatio = _size.height / size.height
+        let ratio = widthRatio < heightRatio ? widthRatio : heightRatio
+        
+        let resizedSize = CGSize(width: size.width * ratio, height: size.height * ratio)
+        
+        UIGraphicsBeginImageContext(resizedSize)
+        draw(in: CGRect(origin: .zero, size: resizedSize))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return resizedImage
+    }
+    
+    func croppedImage(inRect rect: CGRect) -> UIImage? {
+        let rad: (Double) -> CGFloat = { deg in
+            return CGFloat(deg / 180.0 * .pi)
+        }
+        var rectTransform: CGAffineTransform
+        
+        switch imageOrientation {
+            case .left:
+                let rotation = CGAffineTransform(rotationAngle: rad(90))
+                rectTransform = rotation.translatedBy(x: 0, y: -size.height)
+            case .right:
+                let rotation = CGAffineTransform(rotationAngle: rad(-90))
+                rectTransform = rotation.translatedBy(x: -size.width, y: 0)
+            case .down:
+                let rotation = CGAffineTransform(rotationAngle: rad(-180))
+                rectTransform = rotation.translatedBy(x: -size.width, y: -size.height)
+            default:
+                rectTransform = .identity
+        }
+        
+        rectTransform = rectTransform.scaledBy(x: scale, y: scale)
+        
+        let transformedRect = rect.applying(rectTransform)
+        let imageRef = cgImage!.cropping(to: transformedRect)
+        
+        if nil != imageRef {
+            let result = UIImage(cgImage: imageRef!, scale: scale, orientation: imageOrientation)
+            return result
+        } else {
+            return nil
+        }
+    }
+    
+    func fixOrientation() -> UIImage? {
+        switch imageOrientation {
+            case .up:
+                return self
+            default:
+                UIGraphicsBeginImageContextWithOptions(size, false, scale)
+                draw(in: CGRect(origin: .zero, size: size))
+                let result = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                return result
+        }
+    }
+    
+}
+
+extension UIImageView {
+    
+    // Calculate the frame of image inside the image view
+    func imageFrame() -> CGRect {
+        let imageViewSize = self.frame.size
+        guard let imageSize = self.image?.size else { return CGRect.zero }
+        let imageRatio = imageSize.width / imageSize.height
+        let imageViewRatio = imageViewSize.width / imageViewSize.height
+        
+        if imageRatio < imageViewRatio {
+            let scaleFactor = imageViewSize.height / imageSize.height
+            let width = imageSize.width * scaleFactor
+            let topLeftX = (imageViewSize.width - width) * 0.5
+            
+            return CGRect(x: topLeftX, y: 0, width: width, height: imageViewSize.height)
+        } else {
+            let scaleFactor = imageViewSize.width / imageSize.width
+            let height = imageSize.height * scaleFactor
+            let topLeftY = (imageViewSize.height - height) * 0.5
+            
+            return CGRect(x: 0, y: topLeftY, width: imageViewSize.width, height: height)
+        }
+    }
+    
+}
+
+extension FileManager {
+    
+    func clearTmpDirectory() {
+        do {
+            let tmpDirURL = FileManager.default.temporaryDirectory
+            let tmpDirectory = try contentsOfDirectory(atPath: tmpDirURL.path)
+            try tmpDirectory.forEach { file in
+                let fileUrl = tmpDirURL.appendingPathComponent(file)
+                try removeItem(atPath: fileUrl.path)
+            }
+        } catch {
+            //catch the error somehow
+        }
+    }
+    
+}

@@ -18,6 +18,9 @@
 		5E5E641A2386392400374A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5E64182386392400374A17 /* LaunchScreen.storyboard */; };
 		5E5E64252386392500374A17 /* ImageTrimmerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E64242386392500374A17 /* ImageTrimmerTests.swift */; };
 		5E5E64302386392500374A17 /* ImageTrimmerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E642F2386392500374A17 /* ImageTrimmerUITests.swift */; };
+		5EC2B40D238B9CC400ACCF09 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC2B40C238B9CC400ACCF09 /* MainViewController.swift */; };
+		5EC2B40F238BB1A500ACCF09 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC2B40E238BB1A500ACCF09 /* CameraHandler.swift */; };
+		5EC2B411238BB8D000ACCF09 /* TrimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC2B410238BB8D000ACCF09 /* TrimViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		5E5E642B2386392500374A17 /* ImageTrimmerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageTrimmerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5E642F2386392500374A17 /* ImageTrimmerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTrimmerUITests.swift; sourceTree = "<group>"; };
 		5E5E64312386392500374A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EC2B40C238B9CC400ACCF09 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5EC2B40E238BB1A500ACCF09 /* CameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
+		5EC2B410238BB8D000ACCF09 /* TrimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +113,11 @@
 			children = (
 				5E5E640D2386392400374A17 /* AppDelegate.swift */,
 				5E5E640F2386392400374A17 /* SceneDelegate.swift */,
-				5E5E64112386392400374A17 /* LoadingViewController.swift */,
 				5E143A3A2387C19F0096A1C0 /* DataModel.swift */,
+				5EC2B40E238BB1A500ACCF09 /* CameraHandler.swift */,
+				5E5E64112386392400374A17 /* LoadingViewController.swift */,
+				5EC2B40C238B9CC400ACCF09 /* MainViewController.swift */,
+				5EC2B410238BB8D000ACCF09 /* TrimViewController.swift */,
 				5E143A382387C0150096A1C0 /* UIExtension.swift */,
 				5E143A362387B8640096A1C0 /* Helper.swift */,
 				5E5E64162386392400374A17 /* Assets.xcassets */,
@@ -268,10 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC2B40D238B9CC400ACCF09 /* MainViewController.swift in Sources */,
 				5E5E64122386392400374A17 /* LoadingViewController.swift in Sources */,
 				5E5E640E2386392400374A17 /* AppDelegate.swift in Sources */,
 				5E5E64102386392400374A17 /* SceneDelegate.swift in Sources */,
+				5EC2B411238BB8D000ACCF09 /* TrimViewController.swift in Sources */,
 				5E143A392387C0150096A1C0 /* UIExtension.swift in Sources */,
+				5EC2B40F238BB1A500ACCF09 /* CameraHandler.swift in Sources */,
 				5E143A372387B8640096A1C0 /* Helper.swift in Sources */,
 				5E143A3B2387C19F0096A1C0 /* DataModel.swift in Sources */,
 			);
