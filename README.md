@@ -1,5 +1,5 @@
 # ios-image-trimmer
-Set and trim square-and-rectangle-sized images
+Set and trim square-and-rectangle-sized images in iOS
 
 Using Xcode 11.2.1, Target iOS 13.2
 
